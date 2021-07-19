@@ -1,0 +1,472 @@
+<script>
+  // Menu filer
+  $("#menu-flters li a").click(function() {
+    $("#menu-flters li a").removeClass('active');
+    $(this).addClass('active');
+
+    var selectedFilter = $(this).data("filter");
+    //  $("#menu-wrapper").fadeTo(100, 0);
+
+    $(".menu-restaurant").fadeOut();
+
+    setTimeout(function() {
+      $(selectedFilter).slideDown();
+      //$("#menu-wrapper").fadeTo(300, 1);
+    }, 300);
+  });
+</script>
+
+<section id="new-arrival" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center marb-35">
+          <h1 class="header-h">New Arrivals</h1>
+          <p class="header-p" style="font-family: 'Marck Script', cursive; font-size:16pt"> 
+          </p>
+        </div>
+
+       <!-- <div class="col-md-12  text-center" id="menu-flters">
+          <ul style="font-family: 'Marck Script', cursive; font-size:19px">
+            <li><a class="filter active" data-filter=".menu-restaurant">Show All</a></li>
+            <li><a class="filter" data-filter=".men">Men</a></li>
+            <li><a class="filter" data-filter=".women">Women</a></li>
+          </ul>
+        </div> -->
+
+        <div id="menu-wrapper">
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+          <div class="men menu-restaurant"> 
+              
+              <span class="clearfix">
+                  <span class="menu-subtitle">WRIGHTRACK</span>
+          
+              </span>
+              <form action=""> 
+                <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                <input type="button" (click)="addDataToCart()"  value="Add To Cart">
+              </form>  
+
+              <div class="hovereffect">
+                <img class="img-responsive" src="../../assets/N1.jpg" height="70px" width="50px">
+                    <div class="overlay">
+                        
+                        <p class="icon-links">
+                            <a>Rs.368</a>
+                            <!-- <a href="#">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                           
+                            <a href="#">
+                                <span class="fa fa-info"></span>
+                            </a> -->
+                        </p>
+                    </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="men menu-restaurant">
+            <span class="clearfix">
+                <span class="menu-subtitle">MG-0T89</span>
+            </span>
+            <form action=""> 
+                    <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                    <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                    <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                    <input type="button" (click)="watch2()"  value="Add To Cart">
+            </form> 
+            <div class="hovereffect">
+              <img class="img-responsive" src="../../assets/N2.jpg" >
+                 
+                  <div class="overlay">
+                    
+                      
+                    
+                      <p class="icon-links">
+                          <a>Rs.1099</a>
+                          <!-- <a href="#">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+                          </a>
+                         
+                          <a href="#">
+                              <span class="fa fa-info"></span>
+                          </a> -->
+                      </p>
+                  </div>
+          </div>
+          
+           
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="men menu-restaurant">
+            <span class="clearfix"> 
+                <span class="menu-subtitle">TY-A375</span>
+            </span>
+            <form action=""> 
+                    <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                    <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                    <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                    <input type="button" (click)="watch9()"  value="Add To Cart">
+                  </form> 
+            <div class="hovereffect">
+                <img class="img-responsive" src="../../assets/N3.jpg">
+                   
+                    <div class="overlay">
+                      
+                        
+                      
+                        <p class="icon-links">
+                           <a>Rs.1095</a> 
+                            <!-- <a href="#">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                            
+                            <a href="#">
+                                <span class="fa fa-info"></span>
+                            </a> -->
+                        </p>
+                    </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+          <div class="men menu-restaurant">
+            <span class="clearfix">
+              
+                <span class="menu-subtitle">NF-1975</span> 
+              
+            </span>
+            <form action=""> 
+                    <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                    <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                    <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                    <input type="button" (click)="watch3()"  value="Add To Cart">
+                  </form> 
+            <div class="hovereffect">
+                <img class="img-responsive" src="../../assets/N4.jpg" >
+                   
+                    <div class="overlay">
+                      
+                        
+                      
+                        <p class="icon-links">
+                            <a>Rs.1499</a>
+                            <!-- <a href="#">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-heart"></span>
+                            </a>
+                            <a href="#">
+                                <span class="fa fa-info"></span>
+                            </a> -->
+                        </p>
+                    </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="men menu-restaurant">
+              <span class="clearfix">
+                  <span class="menu-subtitle">FAP-907</span>
+                
+              </span>
+              <form action=""> 
+                    <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                    <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                    <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                    <input type="button" (click)="watch4()"  value="Add To Cart">
+                  </form> 
+              <div class="hovereffect">
+                  <img class="img-responsive" src="../../assets/N5.jpg">
+                     
+                      <div class="overlay">
+                        
+                          
+                        
+                          <p class="icon-links">
+                              <a>Rs.899</a>
+                              <!-- <a href="#">
+                                  <span class="glyphicon glyphicon-shopping-cart"></span>
+                              </a>
+                             
+                              <a href="#">
+                                  <span class="fa fa-info"></span>
+                              </a> -->
+                          </p>
+                      </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+              <div class="men menu-restaurant">
+                <span class="clearfix">
+                 
+                    <span class="menu-subtitle">ACD-9086</span>
+                  
+                </span>
+                <form action=""> 
+                        <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                        <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                        <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                        <input type="button" (click)="watch10()"  value="Add To Cart">
+                      </form> 
+                <div class="hovereffect">
+                    <img class="img-responsive" src="../../assets/N6.jpg" >
+                       
+                        <div class="overlay">
+                          
+                            
+                          
+                            <p class="icon-links">
+                                <a>Rs.499</a>
+                                <!-- <a href="#">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                </a>
+                               
+                                <a href="#">
+                                    <span class="fa fa-info"></span>
+                                </a> -->
+                            </p>
+                        </div>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+       
+        
+        <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <div class="women menu-restaurant">
+            <span class="clearfix">
+              
+                <span class="menu-subtitle">WSM-89</span>
+              
+            </span>
+            <form action=""> 
+                    <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                    <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                    <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                    <input type="button" (click)="watch5()"  value="Add To Cart">
+            </form> 
+            <div class="hovereffect">
+                <img class="img-responsive" src="../../assets/N7.jpg" >
+                   
+                    <div class="overlay">
+                      
+                        
+                      
+                        <p class="icon-links">
+                            <a>Rs.599</a>
+                            <!-- <a href="#">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                            
+                            <a href="#">
+                                <span class="fa fa-info"></span>
+                            </a> -->
+                        </p>
+                    </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="women menu-restaurant">
+            <span class="clearfix">
+              
+                <span class="menu-subtitle">SWY-4P</span> 
+              
+            </span>
+            <form action=""> 
+                    <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                    <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                    <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                    <input type="button" (click)="watch6()"  value="Add To Cart">
+                  </form> 
+            <div class="hovereffect">
+                <img class="img-responsive" src="../../assets/N8.jpg">
+                   
+                    <div class="overlay">
+                      
+                        
+                      
+                        <p class="icon-links">
+                            <a>Rs.1499</a>
+                            <!-- <a href="#">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                        
+                            <a href="#">
+                                <span class="fa fa-info"></span>
+                            </a> -->
+                        </p>
+                    </div>
+            </div>
+            
+          </div>
+          </div>
+        
+        
+            <div class="col-md-4 col-sm-6">
+          <div class="women menu-restaurant">
+            <span class="clearfix">
+              
+                <span class="menu-subtitle">ADWR-097 </span>
+              
+            </span>
+            <form action=""> 
+                    <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                    <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                    <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                    <input type="button" (click)="watch11()"  value="Add To Cart">
+                  </form> 
+            <div class="hovereffect">
+                <img class="img-responsive" src="../../assets/N9.jpg">
+                   
+                    <div class="overlay">
+                      
+                        
+                      
+                        <p class="icon-links">
+                           <a>Rs.1899</a> 
+                            <a href="#">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                           
+                            <a href="#">
+                                <span class="fa fa-info"></span>
+                            </a>
+                        </p>
+                    </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <div class="women menu-restaurant">
+            <span class="clearfix">
+              
+                <span class="menu-subtitle">HASM-12</span>
+              
+            </span>
+            <form action=""> 
+                    <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                    <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                    <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                    <input type="button" (click)="watch7()"  value="Add To Cart">
+                  </form> 
+            <div class="hovereffect">
+                <img class="img-responsive" src="../../assets/N10.jpg" >
+                   
+                    <div class="overlay">
+                      
+                        
+                      
+                        <p class="icon-links">
+                            <a>Rs.699</a>
+                            <!-- <a href="#">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                            
+                            <a href="#">
+                                <span class="fa fa-info"></span>
+                            </a> -->
+                        </p>
+                    </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="women menu-restaurant">
+            <span class="clearfix">
+              
+                <span class="menu-subtitle">HYG34</span> 
+              
+            </span>
+            <form action=""> 
+                    <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                    <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                    <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                    <input type="button" (click)="watch8()"  value="Add To Cart">
+                  </form> 
+            <div class="hovereffect">
+                <img class="img-responsive" src="../../assets/N11.jpg" >
+                   
+                    <div class="overlay">
+                      
+                        
+                      
+                        <p class="icon-links">
+                            <a>Rs.1300</a>
+                            <!-- <a href="#">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                        
+                            <a href="#">
+                                <span class="fa fa-info"></span>
+                            </a> -->
+                        </p>
+                    </div>
+            </div>
+            
+          </div>
+          </div>
+        
+        
+            <div class="col-md-4 col-sm-6">
+          <div class="women menu-restaurant">
+            <span class="clearfix">
+              
+                <span class="menu-subtitle">CBADG-98 </span>
+              
+            </span>
+            <form action=""> 
+                    <input  type="text" name="wname"   [(ngModel)]="watchname"  style="display: none;" >
+                    <input   type="button" name="wprice"  [(ngModel)]="price" style="display: none;"  >
+                    <input   type="text" name="wimage" [(ngModel)]="image"  style="display: none;" >
+                    <input type="button" (click)="watch12()"  value="Add To Cart">
+                  </form> 
+            <div class="hovereffect">
+                <img class="img-responsive" src="../../assets/N12.jpg" >
+                   
+                    <div class="overlay">
+                      
+                        
+                      
+                        <p class="icon-links">
+                           <a>Rs.1699</a> 
+                            <!-- <a href="#">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                           
+                            <a href="#">
+                                <span class="fa fa-info"></span>
+                            </a> -->
+                        </p>
+                    </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div><hr Style="margin-left:80px; margin-right:80px;border-color:rgb(74, 184, 142)">
+    <div id="workh"></div>
+  </section>

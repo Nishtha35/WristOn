@@ -1,0 +1,59 @@
+<br><br><br><br>
+<div class="row">
+    <div class="col-md-12 text-center" style="color: white;"><h1>Cart</h1></div>
+</div>
+<br><br>
+<div class="container mb-4" style="background-color: white;">
+    <div class="row"> 
+        <div class="col-12">
+            <div class="table-responsive">
+                <!-- <table class="table table-striped" *ngIf='employees && employees.length>0'> -->
+                        <table class="table table-striped">
+                    <thead>
+                        <tr style="background-color:gray;">
+                            <th scope="col"> </th>
+                            <th scope="col" style="color: white;">ITEM</th>
+                            <th scope="col" style="color: white;">NAME</th>
+                            <th scope="col"  style="color: white;">PRICE</th>
+                            <th> </th>
+
+                            
+                        </tr>
+                    </thead>
+                    <tbody *ngFor='let employee of arr'>
+                        <tr>
+                            <td></td>
+                        <td><img src="{{employee.image}}"></td>
+                        <td>{{employee.watchname}}</td>
+                        <td>{{employee.price}}</td>
+                        <td></td>
+                        </tr>
+
+                        <tr>
+                                <th> </th>
+                                <!-- <th>{{employee.price + employee.price}} </th> -->
+                                <td> <button   type="button" class="btn btn-primary" (click)="delWatchData(employee._id)" >Delete</button></td>
+                                <td></td>
+                        </tr>
+                        <!-- <button type="submit" [routerLink]="['/update',employee._id]">update</button>
+                        <button type="submit" (click)="delData(employee._id)">delete</button> -->
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                
+                <div class="col-sm-12 col-md-6 text-right">
+                    <button class="btn btn-lg btn-block btn-danger text-uppercase" style="margin-right: 10px;" [routerLink]="['/']">Continue Shopping</button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <button class="btn btn-lg btn-block btn-success text-uppercase" style="margin-right: 10px;" [routerLink]="['/checkout']">Checkout</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<br><br><br><br>

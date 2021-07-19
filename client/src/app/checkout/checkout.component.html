@@ -1,0 +1,73 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+ <div class="container">
+
+<form role="form"  style="color: white;" >
+   
+    <div class="row setup-content" id="ProfileSetup-step">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                 <br/>
+                <div class="form-horizontal">
+                    <form  role="form">
+                        <fieldset>
+                      
+                          <legend style="color: white;">Enter Shipping Details</legend>
+                          <br/>
+                          
+                          <div class="form-group">
+                                <div class="form-group">
+                                        <label class="col-sm-3 control-label" >Name</label>
+                                        <div class="col-sm-9">
+                                         <!-- <input maxlength="100" type="text"  class="form-control" placeholder="Full Name" [(ngModel)]="fullname"> -->
+                                         <input name="name" type="text" required class="form-control"  placeholder="Your full name" [(ngModel)]="fullname"  >
+                                        </div>
+                            <label class="col-sm-3 control-label" >Email</label>
+                            <div class="col-sm-9">
+                              <input name="email" type="text" required class="form-control" placeholder="Email" [(ngModel)]="emaill" >
+                            </div>
+                          </div>
+                          
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label" >Mobile Number</label>
+                            <div class="col-sm-9">
+                             <input name="mobilenumber" type="text" required class="form-control" placeholder="Mobile Number" [(ngModel)]="mno" >
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label" >Address</label>
+                            <div class="col-sm-9">
+                             <input name="address1" type="text" required class="form-control" placeholder="Address" [(ngModel)]="ad">
+                            
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                               <div class="form-group">
+                                    <label class="col-sm-6 control-label" >City</label>
+                                    <div class="col-sm-6" style="padding-left:8px">
+                                     <input name="city" type="text" required class="form-control" placeholder="City" />
+                                    </div>
+                                  </div>
+                          </div>
+                           <div class="col-lg-6">
+                               <div class="form-group">
+                                    <label class="col-sm-6 control-label" >State</label>
+                                    <div class="col-sm-6" style="padding:0px">
+                                     <input name="state" type="text" required class="form-control" placeholder="State" />
+                                    </div>
+                                  </div>
+                          </div>
+                         
+                        </fieldset>
+                    </form>
+                </div>
+                <button class="btn btn-primary next Btn btn-lg pull-right" type="button" (click)="ship_addData()" [routerLink]="['/confirm']" >Next</button>
+            </div>
+        </div>
+    </div>
+</form>
+</div>

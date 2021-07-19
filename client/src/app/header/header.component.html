@@ -1,0 +1,41 @@
+<div>
+    <nav class="navbar navbar-inverse  navbar navbar-fixed-top" style="background-color: rgb(74, 184, 142);">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#" style="font-family: 'Bungee Shade', cursive; font-size:17pt;color: black;">RoyalWrist</a>
+            <!-- <img src="../../assets/Capture.PNG" width="150px" height="100px;"> -->
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav " style="font-family: 'Merienda', cursive;color: black;">
+              <li><a  class="ten" [routerLink]="['/']" style="color: black;"><b>Home</b></a></li>
+              <li><a  [routerLink]="['/about']" style="color: black;"><b>About</b></a></li>
+              <li><a [routerLink]="['/new-arrival']" style="color: black;"><b>New Arrivals</b></a></li>
+              <li><a [routerLink]="['/men-watch']" style="color: black;"><b>Men's Watch</b></a></li>
+              <li><a [routerLink]="['/women-watch']" style="color: black;"><b>Women's Watch</b></a></li>
+              <li><a  [routerLink]="['/sale']" style="color: black;"><b>Sale</b></a></li>             
+              <li><a  [routerLink]="['/ofr']" style="color: black;"><b>Offers</b></a></li>
+              <li><a  [routerLink]="['/form']" style="color: black;"><b>Add Watch</b></a></li>
+             <!-- <li><a  [routerLink]="['/admiin']" style="color: black;"><b>Admin</b></a></li> -->
+            </ul>
+           
+            <ul class="nav navbar-nav navbar-right" style="font-family: 'Merienda', cursive;">
+                <!-- <li> <a class="navbar-brand">
+                    <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+              </a> 
+              </li> -->
+              <li><a [routerLink]="['/signup']" style="color: black;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a [routerLink]="['/login']" style="color: black;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              <li><a [routerLink]="['/ucart']" style="color: black;"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
